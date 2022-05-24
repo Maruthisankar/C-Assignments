@@ -1,0 +1,39 @@
+create table Product
+(
+ProductId int Primary key,
+ProductName varchar(50),
+Price int,
+QtyAvailable int)
+
+
+
+
+
+insert into Product values(101,'Pendrive',250,100),
+(102,'Desktop',5000,40),
+(103,'Tablet',11000,35),
+(104,'Mobile',10000,50)
+
+
+
+
+
+select * from product
+
+
+
+
+create or alter proc sp_product_delete
+as
+begin
+begin try
+
+
+
+delete from Product where productid=105
+end try
+begin catch
+print 'Product ID out of Range'
+end catch
+end
+exec sp_product_delete
