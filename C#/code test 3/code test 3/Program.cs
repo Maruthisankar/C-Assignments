@@ -8,8 +8,7 @@
 
     public static SqlConnection getconnection()
     {
-        con = new SqlConnection(@"data source = RMGW58ZLPC0908\SQLEXPRESS; Initial Catalog = EmployeeManagement; user id =sa; password =Temp1234");
-        con.Open();
+        con = new SqlConnection(@"data source =POOLW42SLPC6995\SQLEXPRESS ; Initial Catalog = EmployeeManagement; user id =sa; password =Temp123        con.Open();
         return con;
     }
 
